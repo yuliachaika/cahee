@@ -1,0 +1,55 @@
+.gallery {
+  padding: rem(90) 0 rem(120);
+  background-color: $gallery;
+  &__info-wrap {
+    @include align-self(center); 
+    width: 43%; 
+    text-align: center;
+  }
+  &__title {
+    padding-bottom: rem(25);
+    @include main-title($dark-text);
+  }
+  &__text {
+    padding-bottom: rem(30);
+    @include text($dark-text); 
+  }
+  &__row {
+      width: 100%; 
+      padding: 0; 
+      &--last {
+        padding-bottom: rem(20);
+      }
+  }
+  &__column {
+      @include flex-cont(column);
+      @include justify-content(space-between);
+      @include align-items(center);
+    &--m  {
+      width: calc(50% - 15px); 
+    }
+    &--wide {
+      width: calc(66.67% - 15px);
+    }
+    &--narrow {
+      width: calc(33.33% - 15px); 
+    }
+   }
+    &__img {
+      max-width: 100%;
+      height: auto; 
+      flex: 1 0 auto;
+      margin: 0 0 30px 0;
+      @include box-shadow(0 2px 5px rgba(0, 0, 0, 0.5));
+      &:hover {
+        cursor: pointer;
+        opacity: .8;
+        @include transition(all .3s ease-in-out);
+         
+      } 
+    }
+    &__btn { 
+      @include align-self(center);   
+      @include btn($blue-2);
+    }
+}

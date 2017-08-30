@@ -1,0 +1,48 @@
+.banner {
+	padding-top: rem(200);
+	position: relative;
+  z-index: 10;
+    &:before {
+	  content:""; 
+   	position:absolute;
+   	z-index:-1;
+   	display: block;
+   	top: -200px;
+   	left: 0;  
+   	width: 100%;
+   	height: calc(100% + 330px); 
+   	@include bg('../img/banner.png');
+	}
+    &__info-wrap {
+    	width: 33.33%;
+    	margin-right: auto;
+    	padding-bottom: rem(295);  
+    	@include flex-cont(column);
+    	@include align-items(flex-start);
+    }
+    &__title {
+    	padding-bottom: rem(20);
+    	color: $dark-text;
+		font-size: rem(60);
+		font-weight: 800;
+		line-height: rem(64);
+    }
+    &__text {
+    	padding-bottom: rem(26); 
+    	@include text($dark-text);
+    }
+    &__btn {
+    	@include btn($orange);
+    }
+    &__scroll-wrap {
+    	display: block;
+    	text-align: center;
+    	padding-bottom: rem(65); 
+    }
+    &__scroll {
+    	@include transition(all .3s ease-in-out);
+    	&:hover {
+    		opacity: .8; 
+    	}
+    }
+}

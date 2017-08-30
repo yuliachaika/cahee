@@ -1,0 +1,45 @@
+.footer	{
+	&__flex-row {
+		@include align-items(center);
+	}
+	padding: rem(32) 0; 
+	background-color: $dark-text;
+	&__info	{
+		color: $footer-text;
+		font-size: rem(16);
+		font-weight: 300;
+		line-height: rem(25);
+	}
+	&__logo {
+		&--img{
+			&:hover {
+				cursor: pointer;
+				opacity: .6;
+				@include transition(all .3s ease); 
+			}
+		}
+	}
+	&__copyright {
+		font-size: rem(15);
+		line-height: rem(25);
+		color: $footer-text;
+		font-weight: 300;
+		&--love {
+		color: $love;
+		font-weight: 700;
+		&:hover {
+			color: lighten($love, 10%);
+			@include transition(all .3s ease); 
+		}
+		}
+		&--link {
+			color: $footer-text;
+			&:hover {
+				cursor: pointer;
+				color: lighten($footer-text, 20%);
+				@include transition(all .3s ease); 
+			}
+		}
+
+	}
+}

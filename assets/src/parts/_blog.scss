@@ -1,0 +1,105 @@
+.blog {
+	padding: rem(90) 0 rem(120) 0;
+	background-color: $purple;
+	&__flex-col {
+		@include align-items(center);
+	}
+	&__info-wrap {
+		width: 50%; 
+		text-align: center;
+	}
+	&__title {
+		padding-bottom: rem(30);
+		@include main-title($white);
+	}
+	&__text {
+		padding-bottom: rem(47);
+		@include text($white);
+		line-height: rem(25);
+	}
+	&__row {
+		padding-bottom: rem(50); 
+		width: 100%;
+		@include justify-content(space-between); 
+	}
+	&__btn {
+		@include btn($red);
+	}
+}
+
+.preview {
+	position: relative;
+	width: calc((100% - 60px)/3);
+	@include box-shadow(0 4px 10px rgba(0, 0, 0, 0.5));
+	background-color: #fbfbf7;
+	@include transition(all .3s ease);
+	&--first {
+		@include bg('../img/blog1.png');
+	}
+	&--second {
+		@include bg('../img/blog2.png');
+	}
+	&--third {
+		@include bg('../img/blog3.png');
+	}
+	&:hover {
+		cursor: pointer;
+		background: $white;
+		@include transition(all .4s linear);
+		&:after {
+		content: "";
+		position: absolute; 
+		width: 100%;
+		height: 100%;
+		left: 0;
+		bottom: 0;  
+		background-image: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%);
+		@include transition(all .3s linear);
+		}
+	}
+	&:hover &__date {
+		opacity: 0;
+	}
+	&__img {
+		visibility: hidden;
+	}
+	&__info { 
+		position: absolute;
+		margin: 0 0 rem(23) rem(20); 
+		z-index: 100; 
+		bottom: 0;
+		left: 0; 
+		color: $white; 
+		font-size: rem(13);
+		font-weight: 300;
+		line-height: rem(25); 
+		
+		&--title {
+			padding-bottom: rem(15);
+			@include medium-text($white); 
+		}
+	}
+	&__date {
+		position: absolute;
+		margin: rem(30) 0 0 rem(30); 
+		width: 60px;
+		height: 60px;
+		@include border-radius(5px);
+		background-color: $dark-text;
+		opacity: 0.5;
+		color: $white; 
+		font-size: rem(32);
+		font-weight: 700;
+		line-height: rem(25);
+		text-align: center;
+		top: 0;
+		left: 0;  
+		&--month {
+			font-size: rem(21);
+			font-weight: 800;
+			line-height: rem(25)
+		}	
+	}
+
+
+}

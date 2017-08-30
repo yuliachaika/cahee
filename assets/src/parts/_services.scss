@@ -1,0 +1,70 @@
+.services { 
+	padding-top: rem(100);
+	padding-bottom: rem(151);  
+	background-color: $blue;
+	&__flex-row {
+		@include justify-content(flex-end);
+	}
+	&__image-box {
+		padding-left: rem(15); 
+		width: 50%;
+		position: relative;
+		z-index: 11; 
+		&::after {
+			content: '';
+			position: absolute;
+			@include bg('../img/tomato.png');
+			background-size: contain;
+			top: 0; 
+    		right: -(rem(60)); 
+    		width: 100%;
+   			height: 100%;
+    		z-index: -1;
+		}
+	}
+		&__title {
+		position: relative;
+    	top: 45%;
+    	right: 0;
+		@include main-title($white);
+	}
+}
+
+.services-list {
+	padding: rem(79) rem(85) 0; 
+	&__item {
+		@extend .flex-row;
+		padding: 0;
+		width: rem(400);
+    	height: rem(100);
+    	margin-bottom: rem(20);
+    	background-color: $white; 
+    	@include box-shadow (0 4px 10px rgba(0, 0, 0, 0.5));
+	}
+	&__title {
+		width: 75%;
+		@include medium-text($dark-text);
+		@include align-self(center);
+    	text-align: center;
+	}
+	&__link	{
+		display: block;
+		position: relative;
+		width: 25%; 
+		border-left: 1px solid $gray;
+		&:hover {
+			@include box-shadow (0 4px 10px rgba(0, 0, 0, 0.5));
+			@include transition(all .3s ease-in-out);
+		}
+	}
+	&__icon {
+		position: absolute;
+		max-width: rem(54);
+		max-height: rem(54); 
+		top: 0;
+    	right: 0;
+    	left: 0;
+    	bottom: 0;
+    	margin: auto; 
+    	}
+}

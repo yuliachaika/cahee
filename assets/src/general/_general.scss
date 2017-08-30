@@ -1,0 +1,23 @@
+* {
+	@include box-sizing(border-box); 
+}
+body {
+	background-color: $dark-text;
+}
+.container {
+	max-width: rem(1200);
+	padding: 0 rem(15);
+	margin: 0 auto;  
+}
+a {
+	text-decoration: none;
+	cursor: pointer;
+}
+.flex-row {
+	@include flex-cont(row);
+	@include justify-content(space-between); 
+}
+.flex-col {
+	@include flex-cont(column);
+	@include justify-content(space-between);
+}

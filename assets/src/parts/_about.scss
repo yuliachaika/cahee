@@ -1,0 +1,33 @@
+.about-us {
+	padding-top: rem(50); 
+	background-color: $lightseagreen;
+	background-image: radial-gradient(circle 1125px at center, rgba(0, 196, 196, 0.9) 0%, rgba(0, 183, 183, 0.9) 32%, rgba(0, 173, 173, 0.9) 68%, rgba(0, 156, 156, 0.9) 100%);
+	position: relative;
+	z-index: 15;
+	&__img-wrap {
+		width: 57%;
+		max-width: 100%;
+	} 
+	&__img {
+		width: 100%;
+		position: relative;
+    	max-width: none;
+    	height: auto;
+    	left: -(rem(60));
+    	top: -(rem(18)); 
+	}
+	&__info-wrap {
+		position: relative;
+		top: -(rem(40)); 
+		@include align-self(center); 
+		width: 43%; 
+	}
+	&__title {
+		padding-bottom: rem(15);
+		@include main-title($white);
+	}
+	&__text {
+		padding-bottom: rem(15);
+		@include text($white); 
+	}
+}

@@ -1,0 +1,135 @@
+.header {
+	padding-top: rem(50);
+	padding-bottom: rem(45); 
+	position: relative;
+	z-index: 111;
+	&__logo {
+	width: 33.33%; 
+		&--link {
+		display: block;
+		cursor: pointer;
+			&:hover {
+			opacity: .5; 
+			@include transition(all 350ms ease);
+			}
+		}
+	}
+}
+
+// ------  .header-nav 
+
+.header-nav {
+	width: 50%; 
+	&__nav {
+		width: 100%;
+		@include flex-cont(row);
+		@include justify-content(flex-end);
+		@include align-items(center);
+	}
+	&__items {
+		padding-left: rem(37);
+		&:first-child {
+			padding-left: 0;
+		}
+	}
+	&__link {
+		color: $dark-text;
+		font-size: rem(16);
+		font-weight: 700;
+		line-height: rem(25);
+		text-transform: uppercase;
+		&:hover {
+			color: lighten($dark-text, 40%);
+			@include transition(all 350ms ease);
+		}
+		&--active:before, &:before {      //стырено с codepen, но переделано :)
+  				border: 2px solid rgba($orange, 0);
+  				content: " ";
+  				display: block;
+  				margin: 0 auto;
+ 				position: relative;
+  				@include transition(all 280ms ease-in-out);
+  				width: 0;	
+		}
+		&--active:before, &:hover:before {
+  				border-color: $orange;
+  				@include transition(all 350ms ease-in-out);
+  				width: 90%;
+		}
+		&--active:before, &:hover:before {
+  				top: -5px;
+  				left: 0; 
+  				width: 90%;
+		}
+	}
+}
+
+// --------------  media ---------------
+
+@media screen and (max-width: 600px) {   //стырено, но переделано :)
+	.header-nav {
+		position: relative;
+		min-height: 40px;
+		&__nav {
+			width: rem(200);
+			padding: 5px 0;
+			position: absolute;
+			top: 0;
+			left: auto;
+			right: 0;
+			border: solid 1px $orange;
+			background: $white-2 url('../img/icon-nav.png') no-repeat 10px 11px;
+			border-radius: 5px;
+			box-shadow: 0 1px 2px rgba(0,0,0,.3);
+			&:hover {
+			background-image: none;
+			}
+			&:hover .header-nav__items {
+			display: block;
+			margin: 0 0 5px;
+			}
+			&:hover .header-nav__items--active {
+			background: $white-2 url('../img/icon-check.png') no-repeat 10px 7px;
+			}
+		}
+		&__items {
+			display: none; 
+			margin: 0;
+			&--active {
+				display: block;
+			}
+		}
+		&__link {
+			display: block;
+			padding: 5px 5px 5px 32px;
+			text-align: right;
+			&--active {
+				background: none;
+				color: #666;
+			}
+		}
+
+	}
+}
+
+
+@media screen and (min-width: 601px) and (max-width: 1200px) {
+	.header {
+		padding-bottom: 0; 
+		&__flex {
+			flex-direction: column;
+			@include align-items(center); 
+		}
+		&__logo {
+			margin-bottom: rem(30);
+			padding-left: rem(30);  
+		}
+
+	}
+	.header-nav {
+		width: 100%; 
+		&__nav {
+			@include justify-content(center);
+		}
+	}
+}

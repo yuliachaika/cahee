@@ -1,0 +1,101 @@
+.contact {
+	padding: rem(90) 0 rem(120); 
+	@include bg('../img/contact.png');
+	text-align: center;
+	&__flex {
+		@include align-items(center);
+	}
+	&__info-wrap {
+		width: 31%; 
+		text-align: center;
+	}
+	&__title {
+		padding-bottom: rem(36);
+		@include main-title($dark-text);
+	}
+	&__text {
+		padding-bottom: rem(46);
+		@include text($dark-text);
+		line-height: rem(25);
+	}
+	&__form {
+		width: calc(50% - 75px); 
+	}
+	&__input {
+		width: 100%;
+		height: rem(50);
+		margin-bottom: rem(15);
+		padding-left: rem(20); 
+		background-color: $lightseagreen;
+		opacity: 0.5;
+		border: none;
+		&::-webkit-input-placeholder {
+			color: $white; 
+			font-size: rem(15);
+			font-weight: 300;
+			line-height: rem(50);
+		}
+		&:hover, &--active {
+			cursor: pointer;
+			font-weight: 700;
+			opacity: 1;
+			border-left: 5px solid $blue-3;
+			@include transition(all .3s ease-in-out);
+		}
+		&:focus, &:active {
+			color: $white; 
+			font-size: rem(15);
+			font-weight: 300;
+			outline: none; 
+		}
+  					
+	}
+	&__message {
+		width: 100%; 
+		height: rem(250);
+		padding: rem(20);  
+		resize: none;
+		border: none;
+		background-color: $lightseagreen;
+		opacity: 0.5; 
+		@include transition(all .3s ease-in-out);
+		&::-webkit-input-placeholder {
+			color: $white; 
+			font-size: rem(15);
+			font-weight: 300;
+		
+		}
+		&:hover {
+			cursor: pointer;
+			font-weight: 700;
+			opacity: 1;
+			border-left: 5px solid $blue-3;
+			@include transition(all .3s ease-in-out);
+		}
+		&:focus, &:active {
+			color: $white; 
+			font-size: rem(15);
+			font-weight: 300;
+			outline: none; 
+		}
+
+	}
+	&__address {
+		width: calc(50% - 75px);
+		line-height: rem(25);
+		color: $dark-text; 
+		text-align: left;
+		&--title {
+			font-size: rem(17);
+			font-weight: 700;
+		}
+		&--info {
+			color: $dark-text; 
+			display: block;
+			margin-bottom: rem(15);
+			font-size: rem(20);
+			font-weight: 300;
+		}
+	}
+
+}

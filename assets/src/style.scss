@@ -1,0 +1,16 @@
+@import 'general/reset';
+@import 'general/variables';
+@import 'general/mixins';
+@import 'general/general';
+@import 'general/typography';
+
+@import 'parts/header';
+@import 'parts/banner';
+@import 'parts/about';
+@import 'parts/services';
+@import 'parts/gallery';
+@import 'parts/subscribe';
+@import 'parts/blog';
+@import 'parts/contact';
+
+@import 'parts/footer';
