@@ -447,17 +447,20 @@ body {
       width: calc(66.67% - 15px); }
     .gallery__column--narrow {
       width: calc(33.33% - 15px); }
+  .gallery__img-wrap {
+    margin: 0 0 30px 0;
+    display: flex;
+    background-color: #00c4c4; }
   .gallery__img {
     max-width: 100%;
     height: auto;
-    flex: 1 0 auto;
-    margin: 0 0 30px 0;
+    position: relative;
     -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
     -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); }
     .gallery__img:hover {
       cursor: pointer;
-      opacity: .8;
+      opacity: .6;
       -webkit-transition: all 0.3s ease-in-out;
       -moz-transition: all 0.3s ease-in-out;
       -ms-transition: all 0.3s ease-in-out;
