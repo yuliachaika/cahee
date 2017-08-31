@@ -46,3 +46,5 @@ assets/\.DS_Store
 \.sass-cache/3df162045e3c7213593f190c4f4cb120a28bf37b/_general\.scssc
 
 \.DS_Store
+
+assets/dist/style\.css\.map
