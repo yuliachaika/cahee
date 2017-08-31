@@ -633,43 +633,23 @@ body {
   -ms-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease; }
-  .preview--first {
-    background-image: url("../img/blog1.png");
-    background-repeat: no-repeat;
-    background-size: cover; }
-  .preview--second {
-    background-image: url("../img/blog2.png");
-    background-repeat: no-repeat;
-    background-size: cover; }
-  .preview--third {
-    background-image: url("../img/blog3.png");
-    background-repeat: no-repeat;
-    background-size: cover; }
-  .preview:hover {
-    cursor: pointer;
-    background: #ffffff;
+  .preview:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, transparent 100%);
+    z-index: 1; }
+  .preview:hover .preview__date, .preview:hover .preview__img {
     -webkit-transition: all 0.4s linear;
     -moz-transition: all 0.4s linear;
     -ms-transition: all 0.4s linear;
     -o-transition: all 0.4s linear;
-    transition: all 0.4s linear; }
-    .preview:hover:after {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      left: 0;
-      bottom: 0;
-      background-image: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%);
-      -webkit-transition: all 0.3s linear;
-      -moz-transition: all 0.3s linear;
-      -ms-transition: all 0.3s linear;
-      -o-transition: all 0.3s linear;
-      transition: all 0.3s linear; }
-  .preview:hover .preview__date {
+    transition: all 0.4s linear;
+    cursor: pointer;
     opacity: 0; }
-  .preview__img {
-    visibility: hidden; }
   .preview__info {
     position: absolute;
     margin: 0 0 1.4375rem 1.25rem;

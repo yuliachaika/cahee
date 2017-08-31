@@ -33,35 +33,20 @@
 	@include box-shadow(0 4px 10px rgba(0, 0, 0, 0.5));
 	background-color: #fbfbf7;
 	@include transition(all .3s ease);
-	&--first {
-		@include bg('../img/blog1.png');
-	}
-	&--second {
-		@include bg('../img/blog2.png');
-	}
-	&--third {
-		@include bg('../img/blog3.png');
-	}
-	&:hover {
-		cursor: pointer;
-		background: $white;
-		@include transition(all .4s linear);
-		&:after {
+	&:before {
 		content: "";
-		position: absolute; 
+		position: absolute;
 		width: 100%;
-		height: 100%;
-		left: 0;
-		bottom: 0;  
-		background-image: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%);
-		@include transition(all .3s linear);
+		height: 50%;
+		bottom: 0;
+		left: 0;  
+		background-image: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, transparent 100%);
+		z-index: 1; 
 		}
-	}
-	&:hover &__date {
+	&:hover &__date, &:hover &__img {
+		@include transition(all .4s linear);
+		cursor: pointer;
 		opacity: 0;
-	}
-	&__img {
-		visibility: hidden;
 	}
 	&__info { 
 		position: absolute;
