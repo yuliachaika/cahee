@@ -43,9 +43,11 @@
 		background-image: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, transparent 100%);
 		// z-index: 1; 
 		}
+	&:hover {
+		cursor: pointer;
+	}
 	&:hover &__date, &:hover &__img {
 		@include transition(all .4s linear);
-		cursor: pointer;
 		opacity: 0;
 	}
 	&__img {

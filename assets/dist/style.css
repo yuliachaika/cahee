@@ -641,13 +641,14 @@ body {
     bottom: 0;
     left: 0;
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, transparent 100%); }
+  .preview:hover {
+    cursor: pointer; }
   .preview:hover .preview__date, .preview:hover .preview__img {
     -webkit-transition: all 0.4s linear;
     -moz-transition: all 0.4s linear;
     -ms-transition: all 0.4s linear;
     -o-transition: all 0.4s linear;
     transition: all 0.4s linear;
-    cursor: pointer;
     opacity: 0; }
   .preview__img {
     max-width: 100%; }
